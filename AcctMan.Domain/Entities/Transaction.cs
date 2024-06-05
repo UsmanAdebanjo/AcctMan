@@ -9,19 +9,19 @@ namespace AcctMan.Domain.Entities
 {
     public class Transaction:IEntity<Guid>
     {
-        public Guid Id { get; set; }
         public TransactionType EntryType { get; set; }
         public decimal TransactionAmount
         {
             get =>_transactionAmount;
             set => _transactionAmount = (value >= 0) ? value : 0;
         }
-        public DateTime CreateDate { get; set; }
-        public DateTime LastModifiedDate { get; set; }
-
+        public Guid Id { get; set; }
         public Guid WalletId { get; set; }
 
         public Wallet Wallet { get; set; }
+
+        public DateTime LastModifiedDate { get; set; }
+        public DateTime CreateDate { get; set; }
 
         private decimal _transactionAmount;
     }

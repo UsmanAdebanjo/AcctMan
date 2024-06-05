@@ -17,9 +17,10 @@ namespace AcctMan.Domain.Entities
         public TransactionStatus Status { get; set; }
 
         public string Narration { get; set; }
-        public DateTime LastModifiedDate { get ; set; }
-        public DateTime CreateDate { get ; set ; }
 
         public User User { get; set; }
+
+        public DateTime LastModifiedDate { get; set; }
+        public DateTime CreateDate { get; set; }
     }
 }

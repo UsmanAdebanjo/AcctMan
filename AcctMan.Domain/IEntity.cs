@@ -1,6 +1,6 @@
 ﻿namespace AcctMan.Domain
 {
-    public interface IEntity<Tkey>
+    public interface IEntity<TKey>
     {
         public Guid Id { get; set; }
         public DateTime LastModifiedDate { get; set; }

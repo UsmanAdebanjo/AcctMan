@@ -1,4 +1,5 @@
-﻿using AcctMan.Domain.Enums;
+﻿using AcctMan.Domain.Abstract;
+using AcctMan.Domain.Enums;
 
 namespace AcctMan.Domain.Entities
 {

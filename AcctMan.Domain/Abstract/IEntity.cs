@@ -1,4 +1,4 @@
-﻿namespace AcctMan.Domain
+﻿namespace AcctMan.Domain.Abstract
 {
     public interface IEntity<TKey>
     {

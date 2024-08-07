@@ -1,6 +1,19 @@
-var builder = WebApplication.CreateBuilder(args);
+using AcctMan.Infrastructure.Data;
+using AcctMan.Infrastructure.ServiceExtension;
+using Microsoft.EntityFrameworkCore;
 
+var builder = WebApplication.CreateBuilder(args);
+IConfiguration configuration = builder.Configuration;
 // Add services to the container.
+
+
+builder.Services.AddDbContext<AcctManDbContext>(options =>
+{
+    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
+});
+
+
+builder.Services.AddDIService();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

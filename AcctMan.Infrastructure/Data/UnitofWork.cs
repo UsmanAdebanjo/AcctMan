@@ -1,16 +1,11 @@
-﻿using AcctMan.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AcctMan.Domain.Abstract;
 
 namespace AcctMan.Infrastructure.Data
 {
     public class UnitofWork : IUnitofWork
     {
         private readonly AcctManDbContext _context;
-        public IWalletRepo Wallet{ get; }
+        public IWalletRepo Wallet { get; }
         public UnitofWork(AcctManDbContext context)
         {
             _context = context;

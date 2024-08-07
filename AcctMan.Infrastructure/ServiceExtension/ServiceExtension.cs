@@ -2,9 +2,6 @@
 using AcctMan.Domain.Entities;
 using AcctMan.Infrastructure.Data;
 using AcctMan.Infrastructure.Repositories;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 

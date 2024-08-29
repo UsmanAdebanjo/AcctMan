@@ -15,8 +15,8 @@ namespace AcctMan.Domain.Entities
         public DateTime LastModifiedDate { get; set; }
         public DateTime CreateDate {get; set; }
 
-        public Guid WalletId { get; set; }
+        //public Guid WalletId { get; set; }
         
-        public Wallet Wallet{ get; set; }
+        //public Wallet Wallet{ get; set; }
     }
 }

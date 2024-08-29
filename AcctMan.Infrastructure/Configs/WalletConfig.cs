@@ -8,7 +8,9 @@ namespace AcctMan.Infrastructure.Configs
     {
         public void Configure(EntityTypeBuilder<Wallet> builder)
         {
-            builder.HasKey(x => x.Id);  
+            builder.HasKey(x => x.Id);
+            builder.HasOne(w => w.User);
+            
         }
 
     }

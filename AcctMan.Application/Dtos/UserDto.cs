@@ -1,24 +1,22 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AcctMan.Domain.Entities
+namespace AcctMan.Application.Dtos
 {
-    public class User : IdentityUser
+    public record UserDto
     {
+       
+        public string Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string email { get; set; }
         public string Gender { get; set; }
-        public string Pin { get; set; }
+        public string PhoneNumber { get; set; }
         public DateTime DateOfBirth { get; set; }
         public DateTime LastModifiedDate { get; set; }
-        public DateTime CreateDate {get; set; }
-
-        //public Guid WalletId { get; set; }
-
-        //public Wallet Wallet { get; set; }
+        public DateTime CreateDate { get; set; }
     }
 }

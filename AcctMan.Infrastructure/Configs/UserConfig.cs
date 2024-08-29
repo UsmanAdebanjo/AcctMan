@@ -8,9 +8,10 @@ namespace AcctMan.Infrastructure.Configs
     {
         public void Configure(EntityTypeBuilder<User> builder)
         { 
-            builder.HasOne(u => u.Wallet);
-            builder.Property(t=>t.FirstName).IsRequired();
-            builder.Property(t=>t.LastName).IsRequired();
+            builder.Property(t=>t.FirstName).IsRequired().HasMaxLength(15);
+            builder.Property(t=>t.LastName).IsRequired().HasMaxLength(15);
+            builder.HasKey(u => u.Id);
+
         }
 
     }

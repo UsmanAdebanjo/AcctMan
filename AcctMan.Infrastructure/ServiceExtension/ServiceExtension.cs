@@ -7,13 +7,17 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace AcctMan.Infrastructure.ServiceExtension
 {
+
+
     public static class ServiceExtension
     {
         public static IServiceCollection AddDIService(this IServiceCollection services)
         {
 
+
             services.AddScoped<IUnitofWork, UnitofWork>();
             services.AddScoped(typeof(IGenericRepository<,>),typeof(GenericRepository<,>));
+
 
             services.AddScoped<ITransactionRepo>(sp =>
             {

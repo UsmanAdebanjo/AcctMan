@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AcctMan.Application\AcctMan.Application.csproj" />
     <ProjectReference Include="..\AcctMan.Infrastructure\AcctMan.Infrastructure.csproj" />
   </ItemGroup>
 

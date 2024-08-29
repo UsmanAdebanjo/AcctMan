@@ -11,7 +11,7 @@ namespace AcctMan.Domain.Entities
     public class Wallet:IEntity<Guid>
     {
         public Guid Id { get; set; }
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public string AccountNumber { get; set; }
         public decimal  Amount { get; set; }
         public TransactionType TransactionType { get; set; }

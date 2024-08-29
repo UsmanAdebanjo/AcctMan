@@ -3,6 +3,7 @@ using System;
 using AcctMan.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AcctMan.Infrastructure.Migrations
 {
     [DbContext(typeof(AcctManDbContext))]
-    partial class AcctManDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240812155717_ModifiedDBContetxt")]
+    partial class ModifiedDBContetxt
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
